@@ -55,10 +55,15 @@
 
 ## body
 
-CSS 방법론인 BEM(Block Element Modifier)을 따르는 클래스명을 짓는다.
+CSS 방법론인 BEM(Block Element Modifier)을 따르는 클래스명을 짓는다.  
+body에 css 속성을 적용하는것은 비효율적이므로, body 바로 아래 body__container클래스를 생성한다. (BEM)
 
 ### common
 
 공통된 컴포넌트 작성 (button/input)
 
 #### button
+
+버튼 생성 시 별도의 width값을 지정하지 않고, inline-flex를 이용하면, 내부 글자의 가로너비만큼 버튼이 생성된다.  
+그리고 패딩값으로 좌우 너비를 설정하여 가운데 정렬을 한다.  
+background 색상을 linear-gradient()함수를 이용하여 설정한다.
