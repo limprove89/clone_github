@@ -2,13 +2,7 @@
 
 클론 코딩 프로젝트 - Github
 
-## github
-
-1. Header
-
-2. body
-
-### Header
+## Head
 
 ```HTML
 <!DOCTYPE html>
@@ -47,20 +41,24 @@
 </head>
 ```
 
-#### meta
+### meta
 
 - name과 content로 사이트 전반적인 정보를 기입
 - og(open graph)/ twitter card의 상세 기입
 
-#### link
+### link
 
 - icon -> png파일로 연결
 - apple-touch-icon 은 ios/Android에서 앱 화면 설정
 - index.html 위치 내 favicon.ico 파일이 위치되어있으면, 구형 브라우저에서도 찾아서 인식
 - font cdn과 reset.css, 작성하는 css파일을 연결 (작성 css파일을 가장 하단에 위치)
 
-### body
+## body
 
-#### common
+CSS 방법론인 BEM(Block Element Modifier)을 따르는 클래스명을 짓는다.
 
-공통된 컴포넌트 작성
+### common
+
+공통된 컴포넌트 작성 (button/input)
+
+#### button
