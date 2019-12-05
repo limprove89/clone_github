@@ -94,3 +94,11 @@ ex) chrome => -webkit, ie/edge => ms, firefox => moz, opera => o
 .logo 클래스 안에 a tag를 생성하고 text content는 img 태그의 alt 기능을 대처한다. (이미지는 a태그에 background를 통해 삽입)  
 a 태그의 text는 text-indent: -9999px;로 보이지 않게 설정한다.
 메뉴는 div가 아닌 ul로 구성하는데, 시멘틱한 구조를 위해 ul을 사용한다. 따라서 각각의 자식요소 li안에 a tag로 메뉴를 작성한다.
+
+#### header > sign-group (우측메뉴)
+
+우측 메뉴는 좌측보다 상대적으로 작은 텍스트 메뉴와 input창, 공통 컴포넌트에서 제작한 버튼으로 구성되어 있다.  
+HTML 작성에서 중요한 것은 순서인데, 좌우보다는 위에서 아래의 순서를 고려하여 개발한다.  
+가로 사이즈를 축소하면 navbar는 햄버거 메뉴로 대처되는데 이때 순서는 버튼, input, a tag 순서이다.  
+이 경우 세로 순서에 맞게 작성 후 가로는 order를 이용하여 배치시켜 준다.
+input에 경우는 method를 POST방식으로 작성하고, submit 버튼을 display:none 처리 한다. 또한 form 태그로 input 전체를 감싼다.
