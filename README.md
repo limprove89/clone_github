@@ -73,3 +73,24 @@ background 색상을 linear-gradient()함수를 이용하여 설정한다.
 
 입력 창에는 포커스 시 알려주는 outline 속성(생각보다 제어가 까다로움)을 none으로 설정하고, 가상요소선택자 :focus를 사용하여 정의해준다.  
 box-shadow는 안쪽으로 설정하는 inset을 사용하여 내부 그림자 설정을 한다.
+placeholder의 css 속성을 적용하는 부분은 정식 기술로 채택되지 않음.  
+브라우저 별 기술을 뜻하는 Vendor Prefix를 적용하여 개선한다.  
+ex) chrome => -webkit, ie/edge => ms, firefox => moz, opera => o  
+
+### header
+
+헤더 섹션에서(하단 부분까지도) 내부 중요한 영역(로고/커서 등)은 중앙으로 모여 있다.  
+섹션 안에서 특정한 컨텐츠들을 감싸서(container,inner,wrapper) 중앙으로 모야주는 역활을 구현한다.  
+헤더 영역 또한 기본적인 section 이므로 header태그의 class를 section으로 구성한다.
+
+#### header > 구조 파악
+
+헤더 navbar 부분은 좌우 여백을 가지고 있으며, 컨텐츠는 중간으로 집중되어 있다. 왼쪽 메뉴바에는 logo.img와 4가지 a tag가 위치하고 있으며, 오른쪽 메뉴바에는 좌측에 비해 작은 폰트의 3가지 a tag와 input창과 2가지 버튼으로 구성되어 있다.
+
+#### header > menu-group (좌측메뉴)
+
+좌측 메뉴는 로고 이미지와 4개의 텍스트 메뉴로 구성되어 있다.  
+.menu-group 의 클래스 안에 .logo 클래스(이미지가 아닌 div 클래스)와 .main-menu 클래스(div가 아닌 ul 클래스)를 생성하였다.  
+.logo 클래스 안에 a tag를 생성하고 text content는 img 태그의 alt 기능을 대처한다. (이미지는 a태그에 background를 통해 삽입)  
+a 태그의 text는 text-indent: -9999px;로 보이지 않게 설정한다.
+메뉴는 div가 아닌 ul로 구성하는데, 시멘틱한 구조를 위해 ul을 사용한다. 따라서 각각의 자식요소 li안에 a tag로 메뉴를 작성한다.
