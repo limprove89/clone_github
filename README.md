@@ -101,4 +101,8 @@ a 태그의 text는 text-indent: -9999px;로 보이지 않게 설정한다.
 HTML 작성에서 중요한 것은 순서인데, 좌우보다는 위에서 아래의 순서를 고려하여 개발한다.  
 가로 사이즈를 축소하면 navbar는 햄버거 메뉴로 대처되는데 이때 순서는 버튼, input, a tag 순서이다.  
 이 경우 세로 순서에 맞게 작성 후 가로는 order를 이용하여 배치시켜 준다.
-input에 경우는 method를 POST방식으로 작성하고, submit 버튼을 display:none 처리 한다. 또한 form 태그로 input 전체를 감싼다.
+input에 경우는 method를 POST방식으로 작성하고, submit 버튼을 display:none 처리 한다. 또한 form 태그로 input 전체를 감싼다.  
+a tag에 경우 텍스트에만 클릭 범위를 적용하는 것은 불편하기에 padding을 줘서 영역을 크게 늘린다.  
+또한 우측 두 버튼 사이의 간격은 떨어져 있으므로 display:flex를 적용 후 마진으로 조정한다.  
+
+### visual
