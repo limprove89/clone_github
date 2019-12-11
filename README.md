@@ -106,3 +106,21 @@ a tag에 경우 텍스트에만 클릭 범위를 적용하는 것은 불편하�
 또한 우측 두 버튼 사이의 간격은 떨어져 있으므로 display:flex를 적용 후 마진으로 조정한다.  
 
 ### visual
+
+배경 이미지 안으로 좌측은 text, 우측은 간단 회원가입 형태로 이루어져 있다.  
+좌측은 summary로 정리하고, 우측은 form 안에 input과 button으로 정리한다.  
+좌측 text 영역은 자유롭게 늘어나고 줄어들 수 있게, 우측 form 영역은 가로값을 고정하여 진행한다.
+
+#### visual section
+
+visual section 내부 inner를 정의하여 컨텐츠를 몰아줄 수 있도록 구성  
+
+#### visual > summary
+
+섹션 내부의 text를 정의한다.  
+줄바꿈을 구성할 때는 br이 아닌 \&nbps;를 활용하여 공백값을 준다.  
+
+#### visual > form
+
+form 내부 구성은 ul로 구성하는 것이, div구성보다 유연하다.  
+password 하단 설명은 li 안으로 p tag를 활용하여 덮어준다.
