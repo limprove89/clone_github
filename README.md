@@ -105,7 +105,7 @@ input에 경우는 method를 POST방식으로 작성하고, submit 버튼을 dis
 a tag에 경우 텍스트에만 클릭 범위를 적용하는 것은 불편하기에 padding을 줘서 영역을 크게 늘린다.  
 또한 우측 두 버튼 사이의 간격은 떨어져 있으므로 display:flex를 적용 후 마진으로 조정한다.  
 
-### visual
+### visual > 구조 파악
 
 배경 이미지 안으로 좌측은 text, 우측은 간단 회원가입 형태로 이루어져 있다.  
 좌측은 summary로 정리하고, 우측은 form 안에 input과 button으로 정리한다.  
@@ -124,3 +124,9 @@ visual section 내부 inner를 정의하여 컨텐츠를 몰아줄 수 있도록
 
 form 내부 구성은 ul로 구성하는 것이, div구성보다 유연하다.  
 password 하단 설명은 li 안으로 p tag를 활용하여 덮어준다.
+
+### Feature > 구조 파악
+
+summary와 media, 타일 형식의 레이아웃으로 구성되어있다.  
+별도의 inner가 아닌, 각 컨텐츠의 가운데 정렬을 진행한다.  
+
