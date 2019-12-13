@@ -14,7 +14,7 @@ a {
     background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
     border: 1px solid #d5d5d5;
     border-radius: 4px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     padding: 0 12px;
     font-size: 14px;
@@ -76,9 +76,6 @@ a {
 }
 
 /* SUMMARY */
-.summary {
-
-}
 .summary__title {
     font-size: 38px;
     font-weight: 300;
@@ -152,7 +149,7 @@ header .btn-group {
     display: flex;
 }
 header .btn-group .sign-in {
-    margin-right: 10px;
+    margin-right: 4px;
 }
 #search {
     width: 160px;
@@ -177,6 +174,17 @@ header .sub-menu li a {
 }
 header .sub-menu li a:hover {
     color: #4078c0;
+}
+#toggle-btn {
+    display: none;
+    background: url("../img/toggle-btn.svg");
+    width: 18px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+    text-indent: -9999px;
 }
 
 /* VISUAL */
@@ -289,6 +297,8 @@ header .sub-menu li a:hover {
     line-height: 1.5;
     border-right: 1px solid #e5e5e5;
     box-sizing: border-box;
+    /* float: left;
+    width: 25%; */
 }
 .section--feature .tiles li:last-child {
     border-right: none;
@@ -306,4 +316,172 @@ header .sub-menu li a:hover {
 .section--feature .tiles li p {
     font-size:  14px;
     color: #767676;
+}
+
+/* where is */
+.section--where-is .inner {
+    padding-top: 80px;
+}
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-bottom: none;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    box-sizing: border-box;
+}
+
+/* Pricing Card */
+.section--pricing{
+    background: linear-gradient(#f5f5f5, #fff);
+}
+.section--pricing .inner {
+    padding: 80px 0;
+}
+.section--pricing .card {
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+.section--pricing .card .cell {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section--pricing .card .cell1 .btn {
+    height: 50px;
+    font-size: 16px;
+}
+.section--pricing .card .cell2 {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    flex-grow: 1;
+    flex-basis: 0;
+    border-left: 1px solid #e5e5e5;
+}
+
+/* Footer */
+footer .inner {
+    padding: 50px 0;
+    border-top: 1px solid #eee;
+}
+footer .site-links {
+    display: flex;
+}
+footer .site-links li {
+    font-size: 12px;
+    margin-right: 10px;
+    color: #767676;
+}
+footer .site-links li:last-child {
+    margin-right: 0;
+}
+footer .site-links li a {
+    color: #4078c0;
+}
+footer .site-links li a:hover {
+    text-decoration: underline;
+}
+footer .logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 24px;
+    height: 24px;
+}
+footer .logo:hover svg {
+    fill: #4078c0;
+}
+
+/* Media */
+@media (max-width: 1024px) {
+    header.section .inner {
+        max-width: none;
+        height: auto;
+        padding: 0 20px;
+    }
+    header .menu-group,
+    header .sign-group {
+        float: none;
+    }
+    header .menu-group {
+        display: block;
+    }
+    header .logo {
+        padding: 12px 0;
+    }
+    header .main-menu {
+        display: block;
+        margin-bottom: 10px;
+    }
+    header .main-menu li {
+        border-top: 1px solid #e5e5e5;
+    }
+    header .main-menu li a {
+        padding: 16px 0;
+    }
+    header .sign-group {
+        display: block;
+        padding: 10px 0 20px;
+    }
+    header .btn-group {
+        display: block;
+    }
+    header .btn-group .btn {
+        justify-content: center;
+    }
+    header .btn-group .sign-in {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+    #search-form {
+        margin-top: 12px;
+        margin-right: 0;
+    }
+    #search {
+        width: 100%;
+        height: 42px;
+        text-align: center;
+    }
+    header .sub-menu {
+        margin-top: 12px;
+        margin-right: 0;
+        justify-content: center;
+    }
+    header .toggle {
+        display: none;
+    }
+    header .toggle.on {
+        display: block;
+    }
+    #toggle-btn {
+        display: block;
+    }
+
+    /* Visual */
+    .section--visual {
+        background-image: url("../img/bg-small.jpg");
+    }
+    .section--visual .inner {
+        display: block;
+        max-width: none;
+        padding: 80px 20px;
+    }
+    .section--visual .summary {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    #sign-form {
+        width: auto;
+        max-width: 500px;
+        margin: 0 auto;
+    }
 }
